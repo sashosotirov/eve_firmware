@@ -90,7 +90,7 @@
 #define PS_ON_PIN          12
 
 #if defined(REPRAP_DISCOUNT_SMART_CONTROLLER) || defined(G3D_PANEL)
-  #define KILL_PIN           41
+  //#define KILL_PIN           41
 #else
   #define KILL_PIN           -1
 #endif
@@ -154,7 +154,8 @@
     #endif
 
 
-    #ifdef REPRAP_DISCOUNT_SMART_CONTROLLER
+    #ifdef REPRAP_DISCOUNT_SMART_CONTROLLER{IF NEWTOOL=1}T1
+
       #define BEEPER 37
 
       #define BTN_EN1 31
@@ -168,7 +169,7 @@
       #define BTN_ENC 32
       #define LCD_SDSS 53
       #define SDCARDDETECT -1
-      #define KILL_PIN 41
+      // #define KILL_PIN 41
     #elif defined(LCD_I2C_VIKI)
       #define BTN_EN1 22  // reverse if the encoder turns the wrong way.
       #define BTN_EN2 7
